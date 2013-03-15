@@ -23,10 +23,11 @@
     if (self) {
         // default values
         _edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-        _dataPointColor = [UIColor colorWithRed:0.36f green:0.00f blue:0.00f alpha:1.00f];
-        _dataPointStrokeColor = [UIColor greenColor];
-        _linesColor = [UIColor colorWithRed:0.36f green:0.00f blue:0.00f alpha:1.00f];
-        self.backgroundColor = [UIColor lightGrayColor];
+        _dataPointColor = [UIColor whiteColor];
+        _dataPointStrokeColor = [UIColor blackColor];
+        _linesColor = [UIColor grayColor];
+        _edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+        self.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

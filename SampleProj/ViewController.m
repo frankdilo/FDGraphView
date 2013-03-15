@@ -24,13 +24,6 @@
     // data
     graphView.dataPoints = @[@1, @2, @5, @12, @30, @100];
     
-    // style
-    graphView.edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-    graphView.backgroundColor = [UIColor whiteColor];
-    graphView.dataPointColor = [UIColor whiteColor];
-    graphView.dataPointStrokeColor = [UIColor blackColor];
-    graphView.linesColor = [UIColor grayColor];
-    
     [self.view addSubview:graphView];
 }
 
