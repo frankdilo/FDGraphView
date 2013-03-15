@@ -18,6 +18,7 @@
 		011B4FCB16F3C3EA003ED8D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 011B4FCA16F3C3EA003ED8D4 /* Default-568h@2x.png */; };
 		011B4FCE16F3C3EA003ED8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B4FCD16F3C3EA003ED8D4 /* ViewController.m */; };
 		011B4FD116F3C3EA003ED8D4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011B4FCF16F3C3EA003ED8D4 /* ViewController.xib */; };
+		011B4FDA16F3C411003ED8D4 /* FDGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B4FD916F3C411003ED8D4 /* FDGraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		011B4FCC16F3C3EA003ED8D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		011B4FCD16F3C3EA003ED8D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		011B4FD016F3C3EA003ED8D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		011B4FD816F3C411003ED8D4 /* FDGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGraphView.h; sourceTree = "<group>"; };
+		011B4FD916F3C411003ED8D4 /* FDGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		011B4FBA16F3C3EA003ED8D4 /* SampleProj */ = {
 			isa = PBXGroup;
 			children = (
+				011B4FD716F3C411003ED8D4 /* FDGraphView */,
 				011B4FC316F3C3EA003ED8D4 /* AppDelegate.h */,
 				011B4FC416F3C3EA003ED8D4 /* AppDelegate.m */,
 				011B4FCC16F3C3EA003ED8D4 /* ViewController.h */,
@@ -106,6 +110,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		011B4FD716F3C411003ED8D4 /* FDGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				011B4FD816F3C411003ED8D4 /* FDGraphView.h */,
+				011B4FD916F3C411003ED8D4 /* FDGraphView.m */,
+			);
+			path = FDGraphView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -176,6 +189,7 @@
 				011B4FC116F3C3EA003ED8D4 /* main.m in Sources */,
 				011B4FC516F3C3EA003ED8D4 /* AppDelegate.m in Sources */,
 				011B4FCE16F3C3EA003ED8D4 /* ViewController.m in Sources */,
+				011B4FDA16F3C411003ED8D4 /* FDGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +312,7 @@
 				011B4FD616F3C3EA003ED8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
