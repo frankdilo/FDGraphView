@@ -22,11 +22,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         // default values
-        _edgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+        _edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
         _dataPointColor = [UIColor whiteColor];
         _dataPointStrokeColor = [UIColor blackColor];
         _linesColor = [UIColor grayColor];
-        _edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+        _autoresizeToFitData = NO;
+        _dataPointsXoffset = 100.0f;
         self.backgroundColor = [UIColor whiteColor];
     }
     return self;
@@ -56,6 +57,17 @@
         }];
         return @(min);
     }
+}
+
+- (CGFloat)widhtToFitData {
+    CGFloat res = 0;
+    
+    if (self.dataPoints) {
+        res += (self.dataPoints.count - 1)*self.dataPointsXoffset; // space occupied by data points
+        res += (self.edgeInsets.left + self.edgeInsets.right) ; // lateral margins;
+    }
+    
+    return res;
 }
 
 - (void)drawRect:(CGRect)rect
@@ -114,6 +126,43 @@
         [self.dataPointColor setFill];
         CGContextFillEllipseInRect(context, ellipseRect);
         CGContextStrokeEllipseInRect(context, ellipseRect);
+    }
+}
+
+#pragma mark - Custom setters
+
+- (void)changeFrameWidthTo:(CGFloat)width {
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, width, self.frame.size.height);
+}
+
+- (void)setDataPointsXoffset:(CGFloat)dataPointsXoffset {
+    _dataPointsXoffset = dataPointsXoffset;
+    
+    if (self.autoresizeToFitData) {
+        CGFloat widthToFitData = [self widhtToFitData];
+        if (widthToFitData > self.frame.size.width) {
+            [self changeFrameWidthTo:widthToFitData];
+        }
+    }
+}
+
+- (void)setAutoresizeToFitData:(BOOL)autoresizeToFitData {
+    _autoresizeToFitData = autoresizeToFitData;
+    
+    CGFloat widthToFitData = [self widhtToFitData];
+    if (widthToFitData > self.frame.size.width) {
+        [self changeFrameWidthTo:widthToFitData];
+    }
+}
+
+- (void)setDataPoints:(NSArray *)dataPoints {
+    _dataPoints = dataPoints;
+    
+    if (self.autoresizeToFitData) {
+        CGFloat widthToFitData = [self widhtToFitData];
+        if (widthToFitData > self.frame.size.width) {
+            [self changeFrameWidthTo:widthToFitData];
+        }
     }
 }
 

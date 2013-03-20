@@ -19,6 +19,7 @@
 		011B4FCE16F3C3EA003ED8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B4FCD16F3C3EA003ED8D4 /* ViewController.m */; };
 		011B4FD116F3C3EA003ED8D4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011B4FCF16F3C3EA003ED8D4 /* ViewController.xib */; };
 		011B4FDA16F3C411003ED8D4 /* FDGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B4FD916F3C411003ED8D4 /* FDGraphView.m */; };
+		019B40BA16F9C6E5006591CA /* FDGraphScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019B40B916F9C6E5006591CA /* FDGraphScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		011B4FD016F3C3EA003ED8D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		011B4FD816F3C411003ED8D4 /* FDGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGraphView.h; sourceTree = "<group>"; };
 		011B4FD916F3C411003ED8D4 /* FDGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGraphView.m; sourceTree = "<group>"; };
+		019B40B816F9C6E5006591CA /* FDGraphScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGraphScrollView.h; sourceTree = "<group>"; };
+		019B40B916F9C6E5006591CA /* FDGraphScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGraphScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 			children = (
 				011B4FD816F3C411003ED8D4 /* FDGraphView.h */,
 				011B4FD916F3C411003ED8D4 /* FDGraphView.m */,
+				019B40B816F9C6E5006591CA /* FDGraphScrollView.h */,
+				019B40B916F9C6E5006591CA /* FDGraphScrollView.m */,
 			);
 			path = FDGraphView;
 			sourceTree = SOURCE_ROOT;
@@ -190,6 +195,7 @@
 				011B4FC516F3C3EA003ED8D4 /* AppDelegate.m in Sources */,
 				011B4FCE16F3C3EA003ED8D4 /* ViewController.m in Sources */,
 				011B4FDA16F3C411003ED8D4 /* FDGraphView.m in Sources */,
+				019B40BA16F9C6E5006591CA /* FDGraphScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

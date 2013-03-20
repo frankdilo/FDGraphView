@@ -15,9 +15,13 @@
 
 // Style
 @property (nonatomic) UIEdgeInsets edgeInsets;
+@property (nonatomic) CGFloat dataPointsXoffset;
 // -- colors
 @property (nonatomic, strong) UIColor *dataPointColor;
 @property (nonatomic, strong) UIColor *dataPointStrokeColor;
 @property (nonatomic, strong) UIColor *linesColor;
+
+// Behaviour
+@property (nonatomic) BOOL autoresizeToFitData;
 
 @end

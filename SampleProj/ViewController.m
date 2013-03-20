@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "FDGraphView.h"
+#import "FDGraphScrollView.h"
 
 @interface ViewController ()
 
@@ -19,12 +20,12 @@
 {
     [super viewDidLoad];
     
-    FDGraphView *graphView = [[FDGraphView alloc] initWithFrame:CGRectMake(10, 130, 300, 200)];
+    FDGraphScrollView *scrollView = [[FDGraphScrollView alloc] initWithFrame:CGRectMake(10, 130, 300, 200)];
     
     // data
-    graphView.dataPoints = @[@1, @2, @5, @12, @30, @100];
+    scrollView.dataPoints = @[@1, @2, @5, @12, @30, @100, @123, @44];
     
-    [self.view addSubview:graphView];
+    [self.view addSubview:scrollView];
 }
 
 @end
