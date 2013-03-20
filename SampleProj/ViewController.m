@@ -20,12 +20,7 @@
 {
     [super viewDidLoad];
     
-    FDGraphScrollView *scrollView = [[FDGraphScrollView alloc] initWithFrame:CGRectMake(10, 130, 300, 200)];
-    
-    // data
-    scrollView.dataPoints = @[@1, @2, @5, @12, @30, @100, @123, @44];
-    
-    [self.view addSubview:scrollView];
+     
 }
 
 @end
