@@ -80,7 +80,7 @@
     // lines width
     CGContextSetLineWidth(context, 3);
     
-    // CALCOLO I PUNTI DEL GRAFICO
+    // Calculate the points
     NSInteger count = self.dataPoints.count;
     CGPoint graphPoints[count];
     
@@ -100,24 +100,24 @@
             x = self.edgeInsets.left + (drawingWidth/(count-1))*i;
             if (max != min)
                 y = rect.size.height - ( self.edgeInsets.bottom + drawingHeight*( (dataPointValue - min) / (max - min) ) );
-            else // il grafico si riduce a una retta
+            else // the graph is a straight line
                 y = rect.size.height/2;
             
             graphPoints[i] = CGPointMake(x, y);
         }
     } else if (count == 1) {
-        // pongo il punto al centro del grafico
+        // put the point in the middle
         graphPoints[0].x = drawingWidth/2;
         graphPoints[0].y = drawingHeight/2;
     } else {
         return;
     }
     
-    // DISEGNO IL GRAFICO
+    // DRAW THE GRAPH
     CGContextAddLines(context, graphPoints, count);
     CGContextStrokePath(context);
     
-    // DISEGNO I CERCHI NEL GRANO
+    // DRAW DATA POINTS
     for (int i = 0; i < count; ++i) {
         CGRect ellipseRect = CGRectMake(graphPoints[i].x-3, graphPoints[i].y-3, 6, 6);
         CGContextAddEllipseInRect(context, ellipseRect);
