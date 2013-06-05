@@ -1,12 +1,12 @@
 # FDGraphView
 
-`FDGraphView` is an UIView subclass I created for my next app. It was built using the CoreGraphics’ APIs.
+`FDGraphView` is an UIView subclass I created for [Libretto](http://librettoapp.net). It was built using the CoreGraphics’ APIs.
 
 ## Usage
 
 ### FDGraphView
 
-Add `FDGraphView.{h,m}` to your project, import the header where you want to use this little bastard and here you go:
+Add `FDGraphView.{h,m}` to your project, import the header where you want to use this component and here you go:
 
     FDGraphView *graphView = [[FDGraphView alloc] initWithFrame:CGRectMake(10, 130, 300, 200)];
     
@@ -18,7 +18,13 @@ Add `FDGraphView.{h,m}` to your project, import the header where you want to use
 
 A few style-related options are available, look in the header file.
 
-If you are scared of messing around you should spend your time differently.
+    // Style
+    @property (nonatomic) UIEdgeInsets edgeInsets;
+    @property (nonatomic) CGFloat dataPointsXoffset;
+    // -- colors
+    @property (nonatomic, strong) UIColor *dataPointColor;
+    @property (nonatomic, strong) UIColor *dataPointStrokeColor;
+    @property (nonatomic, strong) UIColor *linesColor;
 
 ### FDGraphScrollView
 
@@ -39,13 +45,10 @@ This is the result:
 
 ## TODO
 
-The main reason for releasing this, besides my awesomeness, is getting your help.
-
-So help me check all these little boxes:
+If you want to help here are some ideas:
 
 - [ ] Add more styling options
-- [ ] Create an UIScrollView wrapper to display larger data sets
-- [x] Take my coffee.
+- [x] Create an UIScrollView wrapper to display larger data sets
 
 ## LICENSE
 
