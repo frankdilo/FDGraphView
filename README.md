@@ -48,7 +48,6 @@ This is the result:
 If you want to help here are some ideas:
 
 - [ ] Add more styling options
-- [ ] Add to Cocoapods
 - [x] Create an UIScrollView wrapper to display larger data sets
 
 ## LICENSE
