@@ -1,6 +1,6 @@
 # FDGraphView
 
-`FDGraphView` is an UIView subclass I created for [Libretto](http://librettoapp.net). It was built using the CoreGraphics’ APIs.
+`FDGraphView` is an UIView subclass I created for [Libretto](http://frankdilo.xyz/apps/libretto). It was built using the CoreGraphics’ APIs.
 
 ## Usage
 
